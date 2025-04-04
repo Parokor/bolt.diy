@@ -1,0 +1,11 @@
+ports:
+  - port: 3000
+    onOpen: open-browser
+    name: Bolt.diy App
+    description: The running instance of the Bolt.diy application
+    visibility: public # Or private if you prefer
+
+tasks:
+  - name: Install Dependencies & Run
+    init: npm install   # Or 'yarn install' if you use yarn
+    command: node server.js
